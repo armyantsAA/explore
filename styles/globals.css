@@ -1,9 +1,13 @@
+:root {
+  --color-primary: #002b6c;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
 }
 
 a {
@@ -13,4 +17,358 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+/* Nav */
+.nav {
+  position: fixed;
+  width: 20%;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1rem;
+  background-color: var(--color-primary);
+  z-index: 1;
+}
+
+.big-font {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 10%;
+  left: auto;
+  right: auto;
+  cursor: pointer;
+}
+
+.nav-item {
+  margin: 0.75rem 0;
+}
+
+/* Main */
+.main {
+  margin-left: 20%;
+  margin-top: 5rem;
+  width: 80%;
+  height: calc(100vh - 5rem);
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #fff;
+}
+
+/* Top Nav */
+.top-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: auto;
+  width: 80%;
+  height: 5rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.top-nav-item {
+  margin: 0.75rem;
+  color: var(--color-primary);
+}
+
+.box {
+  border: 1.5px solid var(--color-primary);
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.search-icon {
+  position: absolute;
+  right: 3rem;
+  top: auto;
+  bottom: auto;
+}
+
+/* Shop */
+.shop-container {
+  height: 14rem;
+  margin: 1.5rem 0 1.5rem 2rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.shop-item-container {
+  height: 85%;
+  display: flex;
+  flex-flow: row nowrap;
+  border: 1px solid var(--color-primary);
+  gap: 0.5rem;
+  border-radius: 0 10px 10px 0;
+}
+
+.shop-item {
+  height: 100%;
+  width: 10rem;
+  background-color: #002b6c10;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.shop-item-name {
+  font-size: 1rem;
+  margin: 0.5rem;
+}
+
+.shop {
+  height: 100%;
+  width: 16rem;
+  min-width: 16rem;
+  display: flex;
+  flex-flow: column nowrap;
+  border: 1px solid #111;
+  background-color: #bccbff;
+  border-radius: 0.5rem;
+}
+
+.shop-image {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.item-image-last {
+  border-radius: 0 10px 0 0;
+}
+
+.shop-name {
+  font-size: 1.25rem;
+  margin: 0.5rem;
+}
+
+.text {
+  font-size: 0.75rem;
+  margin: 0.5rem;
+}
+
+/* Detail */
+.detail-container {
+}
+
+.background-bar {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-primary);
+  overflow: visible;
+}
+
+.background-bar h1 {
+  color: #fff;
+  margin-inline-end: 5rem;
+}
+
+.image-container {
+  position: relative;
+  top: 8rem;
+  left: 2rem;
+  height: 18rem;
+  width: 18rem;
+}
+
+.text-container {
+  padding: 1rem 0;
+  margin: 0 3rem 0 auto;
+  left: auto;
+  height: 20%;
+  width: 30%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.item-container {
+  width: 100%;
+  height: 14rem;
+  padding: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1.5rem;
+  justify-content: flex-start;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Nav */
+  .nav {
+    display: none;
+  }
+
+  .big-font {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10%;
+    left: auto;
+    right: auto;
+  }
+
+  /* Main */
+  .main {
+    margin-left: 0;
+    margin-top: 80px;
+    width: 100vw;
+    height: calc(100vh - 150px);
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: #fff;
+    overflow-y: scroll;
+  }
+
+  /* Top Nav */
+  .top-nav {
+    width: 100%;
+    height: 80px;
+    background-color: var(--color-primary);
+  }
+
+  .top-nav-item {
+    margin: 0.75rem;
+    color: var(--color-primary);
+  }
+
+  .box {
+    border: 1.5px solid var(--color-primary);
+    padding: 5px 10px;
+    text-align: center;
+  }
+
+  .search-icon {
+    position: absolute;
+    right: 3rem;
+    top: auto;
+    bottom: auto;
+    color: #fff;
+  }
+
+  /* Shop */
+  .shop-container {
+    margin-top: 20px;
+    height: auto;
+    margin: 1.5rem 0 1.5rem;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  .shop-item-container {
+    height: auto;
+    width: 85%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-primary);
+    gap: 0.5rem;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .shop-item {
+    height: 10rem;
+    width: 10rem;
+    background-color: #002b6c10;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .shop-item-name {
+    font-size: 1rem;
+    margin: 0.5rem;
+  }
+
+  .shop {
+    height: auto;
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    border: 0;
+    background-color: #bccbff;
+    border-radius: 0;
+  }
+
+  .shop-image {
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  .item-image-last {
+    border-radius: 0 10px 0 0;
+  }
+
+  .shop-name {
+    font-size: 1.25rem;
+    margin: 0.5rem;
+  }
+
+  .text {
+    font-size: 0.75rem;
+    margin: 0.5rem;
+  }
+
+  /* Detail */
+  .detail-container {
+  }
+
+  .background-bar {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-primary);
+    overflow: visible;
+  }
+
+  .background-bar h1 {
+    color: #fff;
+    margin-inline-end: 5rem;
+  }
+
+  .image-container {
+    position: relative;
+    top: 8rem;
+    left: 2rem;
+    height: 18rem;
+    width: 18rem;
+  }
+
+  .text-container {
+    padding: 1rem 0;
+    margin: 0 3rem 0 auto;
+    left: auto;
+    height: 20%;
+    width: 30%;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .item-container {
+    width: 100%;
+    height: 14rem;
+    padding: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1.5rem;
+    justify-content: flex-start;
+  }
+}
+
+.modal {
+  display: block;
 }
